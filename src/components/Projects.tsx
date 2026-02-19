@@ -17,6 +17,7 @@ export function Projects() {
     { id: 'dashboard', label: 'Dashboard Systems' },
     { id: 'ecommerce', label: 'E-commerce' },
     { id: 'uiux', label: 'UI/UX Designs' },
+    { id: 'graphics', label: 'Graphic Designs' },
   ];
 
   const projects = [
@@ -298,6 +299,140 @@ export function Projects() {
             </Button>
           ))}
         </motion.div>
+
+        {/* Design Links */}
+        {selectedCategory === 'uiux' && (
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-gray-900 dark:text-white">UI Designs</h3>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Figma</span>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <Card
+                className="border-gray-200/70 dark:border-gray-800 bg-white/90 dark:bg-gray-800/90 hover:shadow-xl transition-all cursor-pointer overflow-hidden"
+                onClick={() =>
+                  window.open(
+                    'https://www.figma.com/design/eQgqMIbssBPggDoSl0RRLp/My_Designs?node-id=0-1&t=ImAgVMPkkas1pMX4-1',
+                    '_blank'
+                  )
+                }
+              >
+                <div className="relative h-28">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800"
+                    alt="UI design preview"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <span className="text-gray-900 dark:text-white font-semibold">
+                      My Designs
+                    </span>
+                    <ExternalLink className="h-4 w-4 text-gray-400" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6">
+                    A curated collection of my personal Figma designs across many projects over time.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 rounded-full border-gray-300 dark:border-gray-700"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Live Projects
+                  </Button>
+                </div>
+              </Card>
+              <Card
+                className="border-gray-200/70 dark:border-gray-800 bg-white/90 dark:bg-gray-800/90 hover:shadow-xl transition-all cursor-pointer overflow-hidden"
+                onClick={() =>
+                  window.open(
+                    'https://www.figma.com/design/dmho3FUMCETbTSUE7EJTSV/medsync-test?node-id=3300-8252&t=OWAviFPWMG3MbHL9-1',
+                    '_blank'
+                  )
+                }
+              >
+                <div className="relative h-28">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800"
+                    alt="Medsync UI/UX preview"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <span className="text-gray-900 dark:text-white font-semibold">
+                      Medsync UI/UX
+                    </span>
+                    <ExternalLink className="h-4 w-4 text-gray-400" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6">
+                    MedsyncAI connects healthcare workers to hospital jobs with end-to-end
+                    hiring and staff monitoring.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 rounded-full border-gray-300 dark:border-gray-700"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Live Projects
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </div>
+        )}
+        {selectedCategory === 'graphics' && (
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-gray-900 dark:text-white">Graphic Designs</h3>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Drive</span>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <Card
+                className="border-gray-200/70 dark:border-gray-800 bg-white/90 dark:bg-gray-800/90 hover:shadow-xl transition-all cursor-pointer overflow-hidden"
+                onClick={() =>
+                  window.open(
+                    'https://drive.google.com/drive/folders/1FJrdaZQJqSjAzcDeuQhRHBXuF_GuwqVO?usp=drive_link',
+                    '_blank'
+                  )
+                }
+              >
+                <div className="relative h-28">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=800"
+                    alt="Graphic design preview"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <span className="text-gray-900 dark:text-white font-semibold">
+                      Graphic Portfolio
+                    </span>
+                    <ExternalLink className="h-4 w-4 text-gray-400" />
+                  </div>
+                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6">
+                    Professional and personal graphic designs stored on Google Drive.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 rounded-full border-gray-300 dark:border-gray-700"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Live Projects
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </div>
+        )}
 
         {/* Projects Grid */}
         <AnimatePresence mode="wait">
